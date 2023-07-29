@@ -9,7 +9,8 @@
           <card v-for="(item, index) in arrcardTitle" 
           :key="index" :cardTitle="item"
           :cardPrice="arrcardPrice[index]"
-          :cardImage="arrcardImage[index]"></card>
+          :cardImage="arrcardImage[index]"
+          @changePicture="changePictureFunc"></card>
         </div>
       </div>
   </div>
@@ -27,9 +28,15 @@ Card
     return {
       arrcardTitle: ["Mangkir Mauttie", "Saman Kakka", "Lini Dino", "Syail Ammeno"],
       arrcardPrice: ["89.300.000", "14.500.000", "22.000.000", "12.000.000"],
-      arrcardImage: ["chair-1","chair-2","chair-3","chair-4"]
+      arrcardImage: ["chair-1", "chair-2", "chair-3", "chair-4"]
     }
-  }
+  },
+  methods: {
+    changePictureFunc: function (cardImageSlider) {
+      this.$emit('changePictureSlider', cardImageSlider)
+      
+    },
+}
     
 }
 </script>

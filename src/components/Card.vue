@@ -1,20 +1,19 @@
 <template>
-   <div class="d-flex justify-content-around">
-    <div class="card p-4" style="border-radius: 25px">
-      <a href="" class="chairs"></a>
-      <img :src="require('../assets/img/'+cardImage + '.png')" alt="chair">
-      <div class="card-body">
+   <div class="d-flex justify-content-around ">
+      <a href="#" @click="$emit('changePicture', cardImage)" class="chairs text-secondary ">
+      <img :src="require('../assets/img/'+ cardImage + '.png')" alt="chair">
+      <div class="card-body p-4">
         <h5>{{cardTitle}}</h5>
         <p>IDR {{cardPrice}}</p>
       </div>
-    </div>
-      </div>
+    </a>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'CardComponents',
-  props:["cardTitle", "cardPrice", "cardImage"]
+  props: ["cardTitle", "cardPrice", "cardImage"],  
 }
 </script>
 

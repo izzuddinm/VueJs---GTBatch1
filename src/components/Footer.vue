@@ -48,7 +48,7 @@
             "
             type="submit"
           >
-            <img src="assets/tele-icon.png" alt="" />
+            <img src="../assets/img/tele-icon.png" alt="" />
           </button>
         </div>
       </div>
